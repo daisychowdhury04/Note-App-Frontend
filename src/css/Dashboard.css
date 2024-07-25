@@ -1,0 +1,278 @@
+/* Dashboard.css */
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Premium font */
+  background-color: #f5f7fa;
+  overflow: hidden;
+  transition: background-color 0.5s ease;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: radial-gradient(circle at top right, #f0f0f0, #ffffff);
+  transition: background 0.5s ease;
+}
+
+.dark-mode .dashboard-container {
+  background: radial-gradient(circle at top right, #1a1a1a, #121212);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode .navbar {
+  background-color: #1a1a1a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  width: 60px;
+  margin-right: 15px;
+}
+
+.navbar-title {
+  font-size: 1.8em;
+  color: #333;
+}
+
+.dark-mode .navbar-title {
+  color: #f0f0f0;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: #333;
+  margin-left: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.dark-mode .theme-toggle {
+  color: #e0e0e0;
+}
+
+.theme-toggle:hover {
+  color: #f0c700;
+  transform: scale(1.1);
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  position: relative; /* To position the FAB and logout button */
+  overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+/* Dashboard Header */
+.dashboard-header {
+  margin-bottom: 20px;
+}
+
+.dashboard-title {
+  font-size: 2.5em;
+  margin: 0;
+  color: #333;
+}
+
+.dark-mode .dashboard-title {
+  color: #f0f0f0;
+}
+
+/* Loading and No Notes */
+.loading-text,
+.no-notes-text {
+  font-size: 1.2em;
+  color: #666;
+}
+
+/* Notes Container */
+.notes-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px; /* Space between notes */
+  max-height: calc(100vh - 120px); /* Adjust based on header and footer height */
+  /* overflow-y: auto; Allows scrolling within the container */
+}
+
+/* Note Card */
+.note-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.dark-mode .note-card {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.note-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.note-title {
+  font-size: 1.5em;
+  margin: 0;
+  color: #333;
+}
+
+.dark-mode .note-title {
+  color: #e0e0e0;
+}
+
+.note-content {
+  font-size: 1em;
+  color: #666;
+}
+
+.note-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #f0c700;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.note-link:hover {
+  text-decoration: underline;
+}
+
+/* Floating Action Button */
+.fab {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f0c700;
+  color: #333;
+  font-size: 2em;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.fab:hover {
+  background-color: #e0b800;
+  transform: scale(1.1);
+}
+
+.fab:active {
+  transform: scale(0.98);
+}
+
+/* Logout Button */
+.logout-btn {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  border: 2px ;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: #333;
+  background-color: #f0c700;
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding: 12px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.dark-mode .logout-btn {
+  color: #fff;
+}
+
+.dark-mode .fab {
+  color: #fff;
+}
+
+.logout-btn:hover {
+  transform: scale(1.1);
+}
+
+
+/* Note Card Styles */
+.note-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.note-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.note-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.note-content {
+  font-size: 1em;
+  color: #555;
+}
+
+.note-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.note-link,
+.note-delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.note-link {
+  color: #2c00f0;
+}
+
+.note-link:hover {
+  text-decoration: underline;
+}
+
+.note-delete-btn {
+  color: #e74c3c;
+}
+
