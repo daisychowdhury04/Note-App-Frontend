@@ -34,7 +34,7 @@ const LoginPage = () => {
       <div className="login-content">
         <img src={logo} alt="Logo" className="login-logo" />
         <h1 className="login-title">Good Note</h1>
-        <h2 className="login-subtitle">By Ramgopal</h2>
+        <h2 className="login-subtitle">By Daisy</h2>
         <form onSubmit={handleSubmit} className="login-form">
           <input
             type="email"
